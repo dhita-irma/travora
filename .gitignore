@@ -1,0 +1,4 @@
+**\venv-travora
+*.pyc
+.idea/
+db.sqlite3
