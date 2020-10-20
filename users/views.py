@@ -14,7 +14,6 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
-            print('User Created')
             return redirect(reverse('index'))
 
     else:
@@ -46,7 +45,3 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect(reverse("index"))
-
-
-def profile(request):
-    return render(request, 'users/profile.html')
